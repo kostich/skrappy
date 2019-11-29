@@ -221,7 +221,7 @@ func asyncMapIndex(md *mapData, mi *mapIndex, bar *pb.ProgressBar) {
 	} else {
 		err = mi.addMap(md)
 		if err != nil {
-			log.Println(fmt.Sprintf("cannot add map to index: %v", err))
+			log.Println(fmt.Sprintf("cannot add map %v to index: %v", md.MapID, err))
 		}
 	}
 
@@ -245,7 +245,7 @@ func asyncMapDownload(md *mapData, mi *mapIndex, bar *pb.ProgressBar, downloadDi
 	} else {
 		err = mi.markMapAsRetrieved(md)
 		if err != nil {
-			log.Println(fmt.Sprintf("cannot add map to index: %v", err))
+			log.Println(fmt.Sprintf("cannot add map %v to index: %v", md.MapID, err))
 		}
 	}
 
