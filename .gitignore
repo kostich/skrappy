@@ -2,3 +2,4 @@ skrappy
 skrappy.log
 maps.db
 maps/*
+vendor/
